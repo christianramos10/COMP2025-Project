@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	 <link rel="stylesheet" href="localidadesstylesheet.css">
+	 <tittle>Localidades</tittle>
+</head>
+<body>
+
+<!-- Menu Principal --> 
+    <header>
+        <navbar>
+            <div class="topnav">
+				<a href="index.html"><img src="images/logo.jpg" alt="Logo" width="30" height="30"></a>
+                <a href="index.html">Inicio</a>
+                <a href="personajes.html" target="_blank">Personajes</a>
+				<a href="criaturas.html" target="_blank">Criaturas</a>
+				<a href="artefactos.html" target="_blank">Artefactos</a>
+				<a href="localidades.html" target="_blank">Localidades</a>
+                <a href="contacto.html" target="_blank">Contacto</a>
+				<a href="aboutMe.html" target="_blank">Acerca</a>
+            </div>
+        </navbar>
+    </header>
+
+<!-- Contenedor para la galeria de imagenes -->
+<div class="slideshow-container">
+
+  <!-- Imagenes en tamaño completo con texto descriptivo -->
+	  <div class="mySlides fade">
+		<div class="numbertext">1 / 9</div>
+		<img src="images/localidades/aetherPyramid.jpg" style="width:100%">
+		<div class="text">Piramide del Aether</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">2 / 9</div>
+		<img src="images/localidades/agartha.jpg" style="width:100%">
+		<div class="text">Agartha</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">3 / 9</div>
+		<img src="images/localidades/asylum.jpg" style="width:100%">
+		<div class="text">Asylum</div>
+	  </div>
+	  
+	  <div class="mySlides fade">
+		<div class="numbertext">4 / 9</div>
+		<img src="images/localidades/derEisandrache.jpg" style="width:100%">
+		<div class="text">Der Eisandrache</div>
+	  </div>
+	  
+	  <div class="mySlides fade">
+		<div class="numbertext">5 / 9</div>
+		<img src="images/localidades/derRiese.jpg" style="width:100%">
+		<div class="text">Der Riese</div>
+	  </div>
+	  
+	   <div class="mySlides fade">
+		<div class="numbertext">6 / 9</div>
+		<img src="images/localidades/kinoDerToten.jpg" style="width:100%">
+		<div class="text">Facilidad Kino der Toten en Berlin</div>
+	  </div>
+	  
+	   <div class="mySlides fade">
+		<div class="numbertext">7 / 9</div>
+		<img src="images/localidades/moonFacility.jpg" style="width:100%">
+		<div class="text">Facilidad en la Luna</div>
+	  </div>
+	  
+	   <div class="mySlides fade">
+		<div class="numbertext">8 / 9</div>
+		<img src="images/localidades/nuketown2025.jpg" style="width:100%">
+		<div class="text">Facilidad Nuketown</div>
+	  </div>
+	  
+	   <div class="mySlides fade">
+		<div class="numbertext">9 / 9</div>
+		<img src="images/localidades/risingSunFacility.jpg" style="width:100%">
+		<div class="text">Facilidad Rising Sun</div>
+	  </div>
+
+	  <!-- Botones Next & Previous -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+
+	<!-- Los Circulos-->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	  <span class="dot" onclick="currentSlide(5)"></span>
+	  <span class="dot" onclick="currentSlide(6)"></span>
+	  <span class="dot" onclick="currentSlide(7)"></span>
+	  <span class="dot" onclick="currentSlide(8)"></span>
+	  <span class="dot" onclick="currentSlide(9)"></span>
+	</div>
+	
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Controles para next/previous 
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Controles para la imagen en miniatura
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+<!-- Refencias:
+	https://www.w3schools.com/
+	https://fonts.google.com/
+	https://callofduty.fandom.com/wiki/Zombies_(Treyarch)/Story#Aether_Story
+-->
+<footer>&copy;<em id="date">2020</em> Christian Ramos</footer>
+
+</body>
+</html>

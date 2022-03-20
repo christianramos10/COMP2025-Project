@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="contactostylesheet.css"> 
+  <title>Contacto</title>
+</head>
+<body>
+	
+	<h1>Solicitud de Datos</h1>
+		
+		<form action="mailto:christian4565@interfajardo.edu?subject=Formulario"
+			method="post"
+			enctype="text/plain"
+		>
+		
+			<p>
+			<label class="username" for="First Name">First Name: </label>
+			<input type="text"
+					name="primernombre"
+					id="Primer Nombre"
+					size="10"
+					maxlength="50">
+			</p>
+			
+			<p>
+			<label class="username" for="Segundo Nombre">Inicial: </label>
+			<input type="text"
+					name="inicial"
+					id="Inicial"
+					size="1"
+					maxlength="50">
+			</p>
+			
+			<p>
+			<label class="username" for="Primer Apellido">Primer Apellido: </label>
+			<input type="text"
+					name="primerapellido"
+					id="Primer Apellido"
+					size="10"
+					maxlength="50">
+			</p>
+			
+			<p>
+			<label class="username" for="Segundo Nombre">Segundo Apellido: </label>
+			<input type="text"
+					name="segundoapellido"
+					id="Segundo Apellido"
+					size="10"
+					maxlength="50">
+			</p>
+			
+			<p>Cual personaje te agradó mas: </p>
+			<p>
+				<input type="radio" name="descripcion" value="Samantha" />Samantha
+				<input type="radio" name="descripcion" value="Richtofen" />Richtofen
+				<input type="radio" name="descripcion" value="Nikolai" />Nikolai
+				<input type="radio" name="descripcion" value="Dr Monty" />Dr Monty
+				<input type="radio" name="descripcion" value="Shadowman" />Shadowman	
+			</p>
+			
+			<p>Comentarios:</p>
+			<p>
+				<textarea name="mensaje" rows="10" cols="100">Escribe tu comentario aqui: </textarea>
+			</p>
+			
+			
+			<p>
+				<input type="submit" value="Enviar" />
+				<input type="reset" value="Borrar" />
+			</p>
+		</form>
+</body>
+</html>
